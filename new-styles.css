@@ -920,6 +920,7 @@ body {
 @media (max-width: 480px) {
     .project-card.expanded {
         padding: 1.2rem;
+        max-height: 90vh;
     }
 }
 
@@ -1060,6 +1061,20 @@ body {
     margin-top: 1rem;
 }
 
+@media (max-width: 1024px) {
+    .project-card.expanded .project-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card.expanded .project-details {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+
 .detail-section {
     text-align: left;
 }
@@ -1129,6 +1144,32 @@ body {
     overflow: visible;
 }
 
+@media (max-width: 1024px) {
+    .project-card.expanded .project-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        max-height: 600px;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card.expanded .project-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 500px;
+        gap: 1rem;
+        padding: 0.6rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card.expanded .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 400px;
+        gap: 0.8rem;
+        margin: 1rem 0;
+    }
+}
+
 .gallery-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -1140,6 +1181,12 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .gallery-image-wrapper {
+        aspect-ratio: 1 / 1;
+    }
 }
 
 .gallery-image-wrapper:hover {

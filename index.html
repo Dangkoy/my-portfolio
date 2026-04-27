@@ -187,7 +187,7 @@
                 <div class="project-header">
                     <h4>Arduino-Powered Smart Home Hub with Solar Socket and Backup Switching</h4>
                     <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'))" title="Close">&times;</button>
+                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
                 </div>
                 <p class="project-summary">Real-time telemetry dashboard with live current/voltage monitoring, Material Design UI, and high-frequency data visualization.</p>
                 <div class="project-gallery">
@@ -304,7 +304,7 @@
                 <div class="project-header">
                     <h4>Event Registration & Ticket QR Scanner Platform</h4>
                     <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'))" title="Close">&times;</button>
+                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
                 </div>
                 <p class="project-summary">Multi-role event system with three React apps (Admin, Organizer, Attendee), NestJS backend, QR code scanning, and JWT authentication.</p>
                 <div class="project-gallery">
@@ -439,7 +439,7 @@
                 <div class="project-header">
                     <h4>Fishpond Monitoring System</h4>
                     <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'))" title="Close">&times;</button>
+                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
                 </div>
                 <p class="project-summary">Real-time sensor monitoring with email alerts, ESP32 integration, and secure storage across Firebase and MySQL.</p>
                 <div class="project-gallery">
@@ -687,6 +687,13 @@
     </footer>
 
     <script>
+        // Safety reset: avoid stale modal state on refresh/navigation
+        document.body.classList.remove('project-modal-open');
+        document.body.style.overflow = '';
+        document.querySelectorAll('.project-card.expanded').forEach(card => card.classList.remove('expanded'));
+        const initialBackdrop = document.querySelector('.project-backdrop');
+        if (initialBackdrop) initialBackdrop.style.display = 'none';
+
         // Scroll animation observer
         const observerOptions = {
             threshold: 0.05,
@@ -795,9 +802,8 @@
             observer.observe(card);
         });
 
-        // Observe section titles (exclude Projects title: keep it static/normal)
+        // Observe section titles
         document.querySelectorAll('.section-title').forEach(title => {
-            if (title.closest('#projects')) return;
             title.style.opacity = '0';
             observer.observe(title);
         });
@@ -849,6 +855,7 @@
         function openNewCard(cardElement) {
             cardElement.classList.add('expanded');
             document.body.classList.add('project-modal-open');
+            document.body.style.overflow = 'hidden';
 
             const backdrop = document.querySelector('.project-backdrop');
             if (backdrop) backdrop.style.display = 'block';
@@ -859,10 +866,12 @@
             }, 600);
         }
 
-        function closeProjectCard(cardElement) {
+        function closeProjectCard(cardElement, e) {
+            if (e) e.stopPropagation();
             if (!cardElement) return;
             cardElement.classList.remove('expanded');
             document.body.classList.remove('project-modal-open');
+            document.body.style.overflow = '';
             const backdrop = document.querySelector('.project-backdrop');
             if (backdrop) backdrop.style.display = 'none';
         }

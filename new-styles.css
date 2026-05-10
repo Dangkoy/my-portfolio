@@ -2326,13 +2326,13 @@ body {
     }
 
     .project-card.expanded {
-        width: 96%;
+        position: static;
+        width: 100%;
         max-width: 100%;
-        max-height: 80vh;
+        max-height: none;
         padding: 1.2rem;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        margin: 0;
+        overflow: visible;
     }
 
     .project-gallery {
@@ -3342,30 +3342,22 @@ body {
     }
 
     .project-card.expanded {
-        position: fixed;
-        top: 72px !important;
-        left: 1rem !important;
-        right: 1rem;
-        bottom: 1rem;
-        width: auto;
-        max-width: none;
+        position: static;
+        width: 100%;
+        max-width: 100%;
         max-height: none;
         margin: 0;
-        transform: none !important;
-        overflow-y: auto;
-        overflow-x: hidden;
-        z-index: 3000;
+        overflow: visible;
+        z-index: 100;
         border-radius: 12px;
         padding: 1.2rem;
         background: #ffffff;
     }
 
     .project-card.expanded .project-header {
-        position: sticky;
-        top: 0;
-        z-index: 2;
-        background: #ffffff;
-        padding-bottom: 0.7rem;
+        position: relative;
+        background: transparent;
+        padding-bottom: 0.5rem;
     }
 
     .project-card.expanded .project-close-btn {
@@ -3660,29 +3652,24 @@ body {
     }
 
     .project-card.expanded {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        max-height: 100dvh !important;
-        height: 100dvh !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        height: auto !important;
         margin: 0 !important;
-        border-radius: 0 !important;
-        padding: 4.2rem 0.75rem 1rem !important;
+        border-radius: 8px !important;
+        padding: 1rem 0.75rem !important;
         background: #ffffff;
-        z-index: 1001 !important;
-        overflow-y: auto;
+        z-index: 100 !important;
+        overflow: visible !important;
     }
 
     #projects .project-card.expanded .project-header {
-        position: sticky;
-        top: 0;
-        background: #ffffff;
-        z-index: 2;
-        padding: 0.2rem 0 0.5rem;
+        position: relative;
+        background: transparent;
+        z-index: auto;
+        padding: 0.5rem 0 0.8rem;
     }
 
     #projects .project-card.expanded .project-close-btn {
@@ -3738,40 +3725,27 @@ body {
 /* Modal isolation: prevent Projects/Tools overlap on mobile */
 @media (max-width: 768px) {
     body.project-modal-open {
-        overflow: hidden !important;
+        overflow: auto !important;
     }
 
     body.project-modal-open #projects {
         position: relative;
-        z-index: 9997;
+        z-index: auto;
     }
 
     body.project-modal-open #projects .project-backdrop {
-        display: block !important;
-        z-index: 9998 !important;
+        display: none !important;
     }
 
     body.project-modal-open #projects .project-card.expanded {
-        position: fixed !important;
-        inset: 0 !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        height: 100dvh !important;
-        max-height: 100dvh !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
         margin: 0 !important;
-        border-radius: 0 !important;
-        z-index: 9999 !important;
+        border-radius: 10px !important;
+        z-index: auto !important;
         background: #ffffff !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-    }
-
-    /* Hide non-project sections while project modal is open */
-    body.project-modal-open #skills,
-    body.project-modal-open #about,
-    body.project-modal-open .footer {
-        visibility: hidden !important;
-        pointer-events: none !important;
+        overflow: visible !important;
     }
 }
 

@@ -1,19 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Danne Kurt Sahagun - Portfolio</title>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Full Stack Developer & UI/UX Enthusiast. Portfolio showcasing Arduino IoT projects, web applications, and innovative tech solutions.">
+    <meta name="theme-color" content="#2a2a2a">
+    <meta name="color-scheme" content="light">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Full Stack Developer, UI/UX Design, Arduino, IoT, Web Development, Flutter, React">
+    <meta name="author" content="Danne Kurt Sahagun">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://dkcs-portfolio.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dkcs-portfolio.com">
+    <meta property="og:title" content="Danne Kurt Sahagun - Full Stack Developer & UI/UX Designer">
+    <meta property="og:description" content="Explore my portfolio featuring Arduino IoT projects, web applications, and innovative technology solutions.">
+    <meta property="og:image" content="https://dkcs-portfolio.com/og-image.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dkcs-portfolio.com">
+    <meta property="twitter:title" content="Danne Kurt Sahagun - Full Stack Developer">
+    <meta property="twitter:description" content="Full Stack Developer & UI/UX Enthusiast showcasing innovation in web and IoT development.">
+    
+    <!-- PWA & Manifest -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Performance & Preloading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <title>Danne Kurt Sahagun - Full Stack Developer & UI/UX Designer</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="new-styles.css">
-    <!-- MQTT.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/mqtt@4.3.7/dist/mqtt.min.js"></script>
+    
+    <!-- MQTT.js Library (async) -->
+    <script async src="https://cdn.jsdelivr.net/npm/mqtt@4.3.7/dist/mqtt.min.js"></script>
+    
+    <!-- Prefers Reduced Motion Support -->
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Animated Background -->
@@ -51,7 +97,7 @@
         <!-- Left Side: Profile Card -->
         <div class="profile-card">
             <div class="profile-image-wrapper">
-                <img src="grad_pic.jpg" alt="Danne Kurt Sahagun" class="profile-image">
+                <img src="grad_pic.jpg" alt="Danne Kurt Sahagun - Full Stack Developer" class="profile-image" loading="lazy" width="200" height="200">
             </div>
             
             <h1 class="profile-full-name">Danne Kurt C. Sahagun</h1>
@@ -64,7 +110,7 @@
             
             <div class="profile-info-item">
                 <i class="fas fa-briefcase"></i>
-                <span>Full Stack Developer · UI/UX Enthusiast</span>
+                <span>Full Stack Developer ? UI/UX Enthusiast</span>
             </div>
             
             <div class="profile-info-item">
@@ -192,51 +238,51 @@
                 <p class="project-summary">Real-time telemetry dashboard with live current/voltage monitoring, Material Design UI, and high-frequency data visualization.</p>
                 <div class="project-gallery">
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/gui.png" alt="Smart Home - GUI" class="gallery-image">
+                        <img src="arduino/gui.png" alt="Smart Home - GUI" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">GUI Interface</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/grid.jpg" alt="Smart Home - Grid Layout" class="gallery-image">
+                        <img src="arduino/grid.jpg" alt="Smart Home - Grid Layout" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Grid Layout</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/sample_room.jpg" alt="Smart Home - Room Setup" class="gallery-image">
+                        <img src="arduino/sample_room.jpg" alt="Smart Home - Room Setup" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Room Setup</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/mounted_devices.jpg" alt="Smart Home - Mounted Devices" class="gallery-image">
+                        <img src="arduino/mounted_devices.jpg" alt="Smart Home - Mounted Devices" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Mounted Devices</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/wiring.jpg" alt="Smart Home - Wiring Diagram" class="gallery-image">
+                        <img src="arduino/wiring.jpg" alt="Smart Home - Wiring Diagram" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Wiring Diagram</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/manager.jpg" alt="Smart Home - Device Manager" class="gallery-image">
+                        <img src="arduino/manager.jpg" alt="Smart Home - Device Manager" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Device Manager</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/security.jpg" alt="Smart Home - Security Settings" class="gallery-image">
+                        <img src="arduino/security.jpg" alt="Smart Home - Security Settings" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Security Settings</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/settings.jpg" alt="Smart Home - Settings" class="gallery-image">
+                        <img src="arduino/settings.jpg" alt="Smart Home - Settings" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Settings</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/history.jpg" alt="Smart Home - History Log" class="gallery-image">
+                        <img src="arduino/history.jpg" alt="Smart Home - History Log" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">History Log</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/solar.jpg" alt="Smart Home - Solar Panel" class="gallery-image">
+                        <img src="arduino/solar.jpg" alt="Smart Home - Solar Panel" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Solar Integration</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/standby.jpg" alt="Smart Home - Standby Mode" class="gallery-image">
+                        <img src="arduino/standby.jpg" alt="Smart Home - Standby Mode" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Standby Mode</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="arduino/miniature.jpg" alt="Smart Home - Miniature View" class="gallery-image">
+                        <img src="arduino/miniature.jpg" alt="Smart Home - Miniature View" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Miniature Overview</div>
                     </div>
                 </div>
@@ -309,51 +355,51 @@
                 <p class="project-summary">Multi-role event system with three React apps (Admin, Organizer, Attendee), NestJS backend, QR code scanning, and JWT authentication.</p>
                 <div class="project-gallery">
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/unlogged.jpg" alt="Ticket - Unlogged Landing" class="gallery-image">
+                        <img src="ticket/unlogged.jpg" alt="Ticket - Unlogged Landing" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Landing Page</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/register.jpg" alt="Ticket - Register" class="gallery-image">
+                        <img src="ticket/register.jpg" alt="Ticket - Register" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Register</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/register_logged.jpg" alt="Ticket - Register Logged" class="gallery-image">
+                        <img src="ticket/register_logged.jpg" alt="Ticket - Register Logged" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Register Logged In</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/admin_ui.jpg" alt="Ticket - Admin UI" class="gallery-image">
+                        <img src="ticket/admin_ui.jpg" alt="Ticket - Admin UI" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Admin Dashboard</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/admin_events.jpg" alt="Ticket - Admin Events" class="gallery-image">
+                        <img src="ticket/admin_events.jpg" alt="Ticket - Admin Events" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Admin Events</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_ui.jpg" alt="Ticket - Organizer UI" class="gallery-image">
+                        <img src="ticket/organizer_ui.jpg" alt="Ticket - Organizer UI" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Organizer Dashboard</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_create.jpg" alt="Ticket - Organizer Create" class="gallery-image">
+                        <img src="ticket/organizer_create.jpg" alt="Ticket - Organizer Create" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Create Event</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_edit.jpg" alt="Ticket - Organizer Edit" class="gallery-image">
+                        <img src="ticket/organizer_edit.jpg" alt="Ticket - Organizer Edit" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Edit Event</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_events.jpg" alt="Ticket - Organizer Events" class="gallery-image">
+                        <img src="ticket/organizer_events.jpg" alt="Ticket - Organizer Events" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Organizer Events</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/oragnizer_qr.jpg" alt="Ticket - QR Scanner" class="gallery-image">
+                        <img src="ticket/oragnizer_qr.jpg" alt="Ticket - QR Scanner" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">QR Scanner</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/attendee_land.jpg" alt="Ticket - Attendee Landing" class="gallery-image">
+                        <img src="ticket/attendee_land.jpg" alt="Ticket - Attendee Landing" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Attendee Landing</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="ticket/attendee_ticket.jpg" alt="Ticket - Attendee Ticket" class="gallery-image">
+                        <img src="ticket/attendee_ticket.jpg" alt="Ticket - Attendee Ticket" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Ticket View</div>
                     </div>
                 </div>
@@ -444,52 +490,52 @@
                 <p class="project-summary">Real-time sensor monitoring with email alerts, ESP32 integration, and secure storage across Firebase and MySQL.</p>
                 <div class="project-gallery">
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/login.jpg" alt="Fishpond App - Login Screen" class="gallery-image">
+                        <img src="fishpond/login.jpg" alt="Fishpond App - Login Screen" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Login</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/register.jpg" alt="Fishpond App - Register Screen" class="gallery-image">
+                        <img src="fishpond/register.jpg" alt="Fishpond App - Register Screen" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Register</div>
                     </div>
                      <div class="gallery-image-wrapper">
-                        <img src="fishpond/load_log.jpg" alt="Fishpond App - Load Log" class="gallery-image">
+                        <img src="fishpond/load_log.jpg" alt="Fishpond App - Load Log" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Loading Page</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/fish_ui.jpg" alt="Fishpond App - Fish Dashboard" class="gallery-image">
+                        <img src="fishpond/fish_ui.jpg" alt="Fishpond App - Fish Dashboard" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Dashboard</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/about.jpg" alt="Fishpond App - About" class="gallery-image">
+                        <img src="fishpond/about.jpg" alt="Fishpond App - About" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">About</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/feed.jpg" alt="Fishpond App - Feed" class="gallery-image">
+                        <img src="fishpond/feed.jpg" alt="Fishpond App - Feed" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Feed</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/water_manage.jpg" alt="Fishpond App - Water Management" class="gallery-image">
+                        <img src="fishpond/water_manage.jpg" alt="Fishpond App - Water Management" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Water Management</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/pH.jpg" alt="Fishpond App - pH Level" class="gallery-image">
+                        <img src="fishpond/pH.jpg" alt="Fishpond App - pH Level" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">pH Level</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/temp.jpg" alt="Fishpond App - Temperature" class="gallery-image">
+                        <img src="fishpond/temp.jpg" alt="Fishpond App - Temperature" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Temperature</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/turb.jpg" alt="Fishpond App - Turbidity" class="gallery-image">
+                        <img src="fishpond/turb.jpg" alt="Fishpond App - Turbidity" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Turbidity</div>
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/notif.jpg" alt="Fishpond App - Notifications" class="gallery-image">
+                        <img src="fishpond/notif.jpg" alt="Fishpond App - Notifications" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Alerts</div>
                     </div>
                    
                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/reset_pass.jpg" alt="Fishpond App - Reset Password" class="gallery-image">
+                        <img src="fishpond/reset_pass.jpg" alt="Fishpond App - Reset Password" class="gallery-image" loading="lazy" width="300" height="300">
                         <div class="gallery-label">Reset Password</div>
                     </div>
                 </div>
@@ -552,19 +598,19 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy" width="40" height="40">
                             <span>HTML5</span>
                         </a>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy" width="40" height="40">
                             <span>CSS3</span>
                         </a>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="40" height="40">
                             <span>JavaScript</span>
                         </a>
                         <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" width="40" height="40">
                             <span>React</span>
                         </a>
                     </div>
@@ -578,15 +624,15 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" width="40" height="40">
                             <span>Node.js</span>
                         </a>
                         <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" width="40" height="40">
                             <span>Python</span>
                         </a>
                         <a href="https://cplusplus.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy" width="40" height="40">
                             <span>C++</span>
                         </a>
                     </div>
@@ -600,11 +646,11 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy" width="40" height="40">
                             <span>Flutter</span>
                         </a>
                         <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android Studio">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android Studio" loading="lazy" width="40" height="40">
                             <span>Android Studio</span>
                         </a>
                     </div>
@@ -618,7 +664,7 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy" width="40" height="40">
                             <span>MySQL</span>
                         </a>
                         <a href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
@@ -636,7 +682,7 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" loading="lazy" width="40" height="40">
                             <span>Arduino</span>
                         </a>
                     </div>
@@ -650,11 +696,11 @@
                     </div>
                     <div class="tech-grid-category">
                         <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy" width="40" height="40">
                             <span>Git</span>
                         </a>
                         <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy" width="40" height="40">
                             <span>VS Code</span>
                         </a>
                     </div>
@@ -945,6 +991,59 @@
                 });
             });
         });
+    </script>
+
+    <!-- Service Worker Registration for PWA & Offline Support -->
+    <script>
+        // Production: Enable service worker for offline support and caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js', { scope: '/' })
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration);
+                        
+                        // Check for updates periodically
+                        setInterval(() => {
+                            registration.update();
+                        }, 60000); // Check every minute
+                    })
+                    .catch(error => {
+                        console.warn('Service Worker registration failed:', error);
+                    });
+                
+                // Listen for controller change (SW update)
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    console.log('Service Worker has been updated');
+                });
+            });
+            
+            // Handle SW messages
+            navigator.serviceWorker.addEventListener('message', event => {
+                if (event.data.type === 'CACHE_UPDATED') {
+                    console.log('Cache has been updated');
+                }
+            });
+        }
+        
+        // Optimization: Preload images on intersection
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        observer.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
     </script>
 
 </body>

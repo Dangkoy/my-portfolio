@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offline - DKCS Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .offline-container {
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .offline-tips {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .offline-tips h2 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64b5f6;
+        }
+
+        .offline-tips ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .offline-tips li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .offline-tips li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #64b5f6;
+            font-weight: bold;
+        }
+
+        .cached-content {
+            background: rgba(100, 181, 246, 0.1);
+            border-left: 3px solid #64b5f6;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .cached-content h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #64b5f6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cached-content p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .retry-btn {
+            background: #64b5f6;
+            color: #2a2a2a;
+        }
+
+        .retry-btn:hover {
+            background: #42a5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
+        }
+
+        .home-btn {
+            background: transparent;
+            color: #64b5f6;
+            border: 2px solid #64b5f6;
+        }
+
+        .home-btn:hover {
+            background: #64b5f6;
+            color: #2a2a2a;
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #999999;
+        }
+
+        @media (max-width: 480px) {
+            .offline-container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .offline-icon {
+                font-size: 3rem;
+            }
+
+            button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        
+        <h1>You're Currently Offline</h1>
+        
+        <p>It looks like you've lost your internet connection. Don't worry, you can still access cached content!</p>
+
+        <div class="offline-tips">
+            <h2>What You Can Do</h2>
+            <ul>
+                <li>View previously cached pages</li>
+                <li>Review your profile information</li>
+                <li>Browse cached project images</li>
+                <li>Explore technologies and skills</li>
+            </ul>
+        </div>
+
+        <div class="cached-content">
+            <h3>📦 Cached Content Available</h3>
+            <p>Your browser has saved portions of this portfolio. Try navigating to:</p>
+            <p style="margin-top: 0.5rem; font-family: monospace; color: #90caf9;">
+                <a href="/" style="color: #64b5f6; text-decoration: none;">/ (Homepage)</a>
+            </p>
+        </div>
+
+        <div class="action-buttons">
+            <button class="retry-btn" onclick="retryConnection()">🔄 Retry Connection</button>
+            <button class="home-btn" onclick="goHome()">🏠 Go to Homepage</button>
+        </div>
+
+        <p class="footer-note">
+            💡 Tip: If you're still offline, the page may gradually load as your cached data becomes available.
+        </p>
+    </div>
+
+    <script>
+        function retryConnection() {
+            // Attempt to reload
+            window.location.reload();
+        }
+
+        function goHome() {
+            window.location.href = '/';
+        }
+
+        // Auto-retry every 5 seconds
+        setInterval(() => {
+            fetch('/', { method: 'HEAD', mode: 'no-cors' })
+                .then(() => {
+                    // Connection restored, redirect
+                    window.location.href = '/';
+                })
+                .catch(() => {
+                    // Still offline, do nothing
+                });
+        }, 5000);
+
+        // Show connection status
+        window.addEventListener('online', () => {
+            window.location.href = '/';
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('Connection lost');
+        });
+    </script>
+</body>
+</html>

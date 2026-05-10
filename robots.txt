@@ -1,0 +1,33 @@
+# robots.txt for dkcs-portfolio.com
+# Production SEO optimization
+
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /*.json$
+
+# Crawl delay settings (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://dkcs-portfolio.com/sitemap.xml
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Social media bots - allow for rich snippets
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

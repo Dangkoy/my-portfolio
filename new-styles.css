@@ -9,6 +9,9 @@ html {
     scroll-padding-top: 120px;
     overflow-y: scroll;
     overflow-x: hidden;
+    /* Enable GPU acceleration for smoother scrolling */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 600px) {
@@ -21,6 +24,36 @@ html {
     html {
         scroll-padding-top: 55px;
     }
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize scrolling performance */
+body {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+    /* Smooth scroll on mobile */
+    scroll-padding-top: 80px;
+    /* Enable momentum scrolling on iOS */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Text remains selectable */
+p, h1, h2, h3, h4, h5, h6, a, span, li {
+    -webkit-user-select: text;
+    user-select: text;
 }
 
 /* ============ ANIMATED BACKGROUND ============ */
@@ -42,6 +75,11 @@ html {
     opacity: 0.3;
     animation: float 20s infinite ease-in-out;
     pointer-events: none;
+    /* GPU acceleration for smooth animations during scroll */
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .floating-particle:nth-child(1) {
@@ -190,33 +228,33 @@ html {
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translate3d(-100px, 0, 0);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translate3d(100px, 0, 0);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes slideInUp {
     from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translate3d(0, 100px, 0);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -360,6 +398,8 @@ body {
     right: 0;
     transition: transform 0.28s ease, padding 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .navbar.navbar-hidden {
@@ -945,6 +985,9 @@ body {
     position: relative;
     z-index: 1;
     overflow: visible;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .project-card.expanded {
@@ -2944,7 +2987,7 @@ body {
     .socials .mobile-social-link {
         flex: 1 1 0;
         min-width: 0;
-        height: 34px;
+        height: 60px;
         border-radius: 7px;
         background: #ffffff;
         border: 1px solid #dcdcdc;
@@ -2953,7 +2996,7 @@ body {
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        font-size: 0.7rem;
+        font-size: 1.6rem;
         transition: all 0.2s ease;
     }
 
@@ -3207,8 +3250,8 @@ body {
     }
 
     .socials .mobile-social-link {
-        height: 31px;
-        font-size: 0.62rem;
+        height: 48px;
+        font-size: 1.3rem;
     }
 
     .container {
@@ -3397,7 +3440,7 @@ footer.footer {
     #home .socials .mobile-social-link {
         flex: 1 1 0;
         min-width: 0;
-        height: 34px;
+        height: 60px;
         border-radius: 7px;
         background: #ffffff;
         border: 1px solid #dcdcdc;
@@ -3406,7 +3449,7 @@ footer.footer {
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        font-size: 0.7rem;
+        font-size: 1.6rem;
         line-height: 1;
         transition: all 0.2s ease;
     }
@@ -3431,7 +3474,7 @@ footer.footer {
     }
 
     #home .socials .mobile-social-link {
-        height: 31px;
-        font-size: 0.62rem;
+        height: 48px;
+        font-size: 1.3rem;
     }
 }

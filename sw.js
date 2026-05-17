@@ -8,10 +8,10 @@ const CACHE_NAME = `dkcs-portfolio-${CACHE_VERSION}`;
 
 // Core assets to cache on install
 const CORE_ASSETS = [
-    '/',
-    '/index.html',
-    '/new-styles.css',
-    '/manifest.json'
+    './',
+    './index.html',
+    './new-styles.css',
+    './manifest.json'
 ];
 
 // Install event - cache core assets

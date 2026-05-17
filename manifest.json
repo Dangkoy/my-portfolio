@@ -2,8 +2,8 @@
   "name": "Danne Kurt Sahagun - Portfolio",
   "short_name": "DKCS Portfolio",
   "description": "Full Stack Developer & UI/UX Enthusiast. Showcasing Arduino IoT, web development, and innovative tech solutions.",
-  "start_url": "/index.html",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#2a2a2a",
@@ -11,14 +11,14 @@
   "categories": ["technology", "portfolio"],
   "screenshots": [
     {
-      "src": "/og-image.png",
+      "src": "./og-image.png",
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
       "purpose": "any maskable"
     },
     {
-      "src": "/og-image.png",
+      "src": "./og-image.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow",
@@ -27,25 +27,25 @@
   ],
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-192-maskable.png",
+      "src": "./icon-192-maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512-maskable.png",
+      "src": "./icon-512-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -59,7 +59,7 @@
       "url": "/?view=projects",
       "icons": [
         {
-          "src": "/icon-projects.png",
+          "src": "./icon-projects.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -72,7 +72,7 @@
       "url": "/#home",
       "icons": [
         {
-          "src": "/icon-contact.png",
+          "src": "./icon-contact.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -82,8 +82,8 @@
   "prefer_related_applications": false,
   "screenshots": [],
   "serviceworker": {
-    "src": "/sw.js",
-    "scope": "/",
+    "src": "./sw.js",
+    "scope": "./",
     "update_via_cache": "none"
   }
 }

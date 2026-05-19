@@ -44,7 +44,7 @@
     <title>Danne Kurt Sahagun - Full Stack Developer</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="new-styles.css">
+    <link rel="stylesheet" href="styles.css">
     
     <!-- MQTT.js Library (async) -->
     <script async src="https://cdn.jsdelivr.net/npm/mqtt@4.3.7/dist/mqtt.min.js"></script>
@@ -88,6 +88,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#skills">Tools</a></li>
             </ul>
         </div>
@@ -132,10 +133,10 @@
                 <a href="https://www.facebook.com/aleck.sahagun" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#resume" class="mobile-social-link" title="Resume">
+                <a href="Official CV.pdf" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="Resume">
                     <i class="fas fa-file-pdf"></i>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="GitHub">
+                <a href="https://github.com/Dangkoy" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -179,19 +180,19 @@
             </a>
 
             <!-- Resume Card -->
-            <a href="#resume" class="info-card resume-card">
+            <a href="Official CV.pdf" target="_blank" rel="noopener noreferrer" class="info-card resume-card">
                 <div class="card-icon">
                     <i class="fas fa-file-pdf"></i>
                 </div>
                 <div class="card-content">
                     <h3>Resume</h3>
-                    <p>View my resume</p>
+                    <p>View my CV</p>
                 </div>
                 <i class="fas fa-arrow-up-right"></i>
             </a>
 
             <!-- GitHub Card -->
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="info-card github-card">
+            <a href="https://github.com/Dangkoy" target="_blank" rel="noopener noreferrer" class="info-card github-card">
                 <div class="card-icon">
                     <i class="fab fa-github"></i>
                 </div>
@@ -216,7 +217,7 @@
             </div>
             <div class="about-card">
                 <h3>Education</h3>
-                <p>Cavite State University - Imus Campus<br>Bachelor of Science in Information Technology (BSIT) Fourth-Year Student<br>(Expected Graduation: [2026])</p>
+                <p>Cavite State University - Imus Campus<br>Bachelor of Science in Information Technology (BSIT) Graduate<br>(Graduated: 2026)</p>
             </div>
             <div class="about-card">
                 <h3>Interests</h3>
@@ -227,483 +228,352 @@
 
     <section id="projects" class="projects-section">
         <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-backdrop" onclick="closeProjectCard(document.querySelector('.project-card.expanded'))"></div>
-            <div class="project-card" onclick="toggleProjectCard(this)">
-                <div class="project-header">
-                    <h4>Arduino-Powered Smart Home Hub with Solar Socket and Backup Switching</h4>
-                    <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
-                </div>
-                <p class="project-summary">Real-time telemetry dashboard with live current/voltage monitoring, Material Design UI, and high-frequency data visualization.</p>
-                <div class="project-gallery">
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/gui.png" alt="Smart Home - GUI" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">GUI Interface</div>
+        <div class="projects-accordion">
+            <article class="project-accordion-item">
+                <div class="project-accordion-header">
+                    <div class="project-accordion-content">
+                        <h4 class="project-accordion-title">Arduino-Powered Smart Home Hub with Solar Socket and Backup Switching</h4>
+                        <p class="project-accordion-description">Real-time telemetry dashboard with live current/voltage monitoring. Material Design UI and high-frequency data visualization.</p>
                     </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/grid.jpg" alt="Smart Home - Grid Layout" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Grid Layout</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/sample_room.jpg" alt="Smart Home - Room Setup" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Room Setup</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/mounted_devices.jpg" alt="Smart Home - Mounted Devices" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Mounted Devices</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/wiring.jpg" alt="Smart Home - Wiring Diagram" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Wiring Diagram</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/manager.jpg" alt="Smart Home - Device Manager" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Device Manager</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/security.jpg" alt="Smart Home - Security Settings" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Security Settings</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/settings.jpg" alt="Smart Home - Settings" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Settings</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/history.jpg" alt="Smart Home - History Log" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">History Log</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/solar.jpg" alt="Smart Home - Solar Panel" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Solar Integration</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/standby.jpg" alt="Smart Home - Standby Mode" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Standby Mode</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="arduino/miniature.jpg" alt="Smart Home - Miniature View" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Miniature Overview</div>
+                    <div class="project-accordion-toggle">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <strong>Development Environment & Tools:</strong>
-                        <ul>
-                            <li>Arduino IDE</li>
-                            <li>PlatformIO for build management</li>
-                            <li>VS Code with embedded development extensions</li>
+                <div class="project-accordion-body">
+                    <div class="project-body-content">
+                        <h5>Key Features:</h5>
+                        <ul class="project-features">
+                            <li>ESP32 + MQTT + REST integration</li>
+                            <li>Live current, voltage, and status tracking</li>
+                            <li>Solar power management and relay automation</li>
                         </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Backend & API:</strong>
-                        <ul>
-                            <li>ESP32 microcontroller firmware</li>
-                            <li>RESTful API for device communication</li>
-                            <li>MQTT protocol for real-time messaging</li>
-                            <li>JSON data format for sensor readings</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Core Technologies:</strong>
-                        <ul>
-                            <li>C++ (Arduino firmware)</li>
-                            <li>JavaScript/Node.js (backend services)</li>
-                            <li>Firebase for real-time database</li>
-                            <li>WebSocket for live updates</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>External Libraries:</strong>
-                        <ul>
-                            <li>Arduino libraries for GPIO control</li>
-                            <li>WiFi connectivity libraries</li>
-                            <li>Sensor driver libraries (temperature, humidity, current monitoring)</li>
-                            <li>OTA (Over-The-Air) update capability</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Hardware Integration:</strong>
-                        <ul>
-                            <li>ESP32 microcontroller</li>
-                            <li>Multiple sensor modules (DHT, current sensors, motion sensors)</li>
-                            <li>Relay modules for device control</li>
-                            <li>Solar panel integration for power management</li>
-                            <li>Real-time telemetry data collection</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Features:</strong>
-                        <ul>
-                            <li>Real-time telemetry dashboard</li>
-                            <li>Live current/voltage monitoring</li>
-                            <li>Device security and authentication</li>
-                            <li>History logging and data analytics</li>
-                            <li>Solar integration and power management</li>
-                            <li>High-frequency data visualization</li>
-                            <li>Responsive Material Design UI</li>
-                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">MQTT</span>
+                            <span class="project-tag">Firebase</span>
+                        </div>
                     </div>
                 </div>
+            </article>
+
+            <article class="project-accordion-item">
+                <div class="project-accordion-header">
+                    <div class="project-accordion-content">
+                        <h4 class="project-accordion-title">Event Registration & Ticket QR Scanner Platform</h4>
+                        <p class="project-accordion-description">Multi-role event system with three React apps (Admin, Organizer, Attendee), NestJS backend, QR code scanning, and JWT authentication.</p>
+                    </div>
+                    <div class="project-accordion-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="project-accordion-body">
+                    <div class="project-body-content">
+                        <h5>Key Features:</h5>
+                        <ul class="project-features">
+                            <li>Admin, organizer, and attendee workflows</li>
+                            <li>QR ticket generation and secure check-in</li>
+                            <li>Role-based access control with analytics</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">NestJS</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-accordion-item">
+                <div class="project-accordion-header">
+                    <div class="project-accordion-content">
+                        <h4 class="project-accordion-title">Fishpond Monitoring System</h4>
+                        <p class="project-accordion-description">Real-time sensor monitoring with email alerts, ESP32 integration, and secure storage across Firebase and MySQL.</p>
+                    </div>
+                    <div class="project-accordion-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="project-accordion-body">
+                    <div class="project-body-content">
+                        <h5>Key Features:</h5>
+                        <ul class="project-features">
+                            <li>Flutter mobile dashboard with graphs</li>
+                            <li>ESP32 sensor and Firebase data sync</li>
+                            <li>Email alerts, authentication, and monitoring tools</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">ESP32</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Featured Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">Project Gallery</h2>
+        
+        <!-- Arduino Gallery -->
+        <div class="gallery-group">
+            <h3 class="gallery-group-title">Arduino IoT Projects</h3>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="arduino/grid.jpg" alt="Arduino Grid Interface" loading="lazy" width="300" height="300">
+                    <figcaption>Grid Interface</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/gui.png" alt="Arduino GUI" loading="lazy" width="300" height="300">
+                    <figcaption>Control GUI</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/history.jpg" alt="Arduino History Log" loading="lazy" width="300" height="300">
+                    <figcaption>History Log</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/manager.jpg" alt="Arduino Manager" loading="lazy" width="300" height="300">
+                    <figcaption>Device Manager</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/miniature.jpg" alt="Arduino Miniature" loading="lazy" width="300" height="300">
+                    <figcaption>Hardware Setup</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/mounted_devices.jpg" alt="Arduino Mounted Devices" loading="lazy" width="300" height="300">
+                    <figcaption>Mounted Devices</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/sample_room.jpg" alt="Arduino Sample Room" loading="lazy" width="300" height="300">
+                    <figcaption>Test Environment</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/security.jpg" alt="Arduino Security" loading="lazy" width="300" height="300">
+                    <figcaption>Security Panel</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/settings.jpg" alt="Arduino Settings" loading="lazy" width="300" height="300">
+                    <figcaption>Settings</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/solar.jpg" alt="Arduino Solar Panel" loading="lazy" width="300" height="300">
+                    <figcaption>Solar Integration</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/standby.jpg" alt="Arduino Standby Mode" loading="lazy" width="300" height="300">
+                    <figcaption>Standby Mode</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="arduino/wiring.jpg" alt="Arduino Wiring Diagram" loading="lazy" width="300" height="300">
+                    <figcaption>Wiring Setup</figcaption>
+                </figure>
             </div>
-            <div class="project-card" onclick="toggleProjectCard(this)">
-                <div class="project-header">
-                    <h4>Event Registration & Ticket QR Scanner Platform</h4>
-                    <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
-                </div>
-                <p class="project-summary">Multi-role event system with three React apps (Admin, Organizer, Attendee), NestJS backend, QR code scanning, and JWT authentication.</p>
-                <div class="project-gallery">
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/unlogged.jpg" alt="Ticket - Unlogged Landing" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Landing Page</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/register.jpg" alt="Ticket - Register" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Register</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/register_logged.jpg" alt="Ticket - Register Logged" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Register Logged In</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/admin_ui.jpg" alt="Ticket - Admin UI" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Admin Dashboard</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/admin_events.jpg" alt="Ticket - Admin Events" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Admin Events</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_ui.jpg" alt="Ticket - Organizer UI" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Organizer Dashboard</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_create.jpg" alt="Ticket - Organizer Create" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Create Event</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_edit.jpg" alt="Ticket - Organizer Edit" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Edit Event</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/organizer_events.jpg" alt="Ticket - Organizer Events" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Organizer Events</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/oragnizer_qr.jpg" alt="Ticket - QR Scanner" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">QR Scanner</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/attendee_land.jpg" alt="Ticket - Attendee Landing" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Attendee Landing</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="ticket/attendee_ticket.jpg" alt="Ticket - Attendee Ticket" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Ticket View</div>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <strong>Frontend - Admin App (React + Vite):</strong>
-                        <ul>
-                            <li>TypeScript for type safety</li>
-                            <li>React with modern hooks</li>
-                            <li>Vite build tool</li>
-                            <li>Responsive UI components</li>
-                            <li>Data visualization dashboards</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Frontend - Organizer App (React + Vite):</strong>
-                        <ul>
-                            <li>TypeScript implementation</li>
-                            <li>React component architecture</li>
-                            <li>Vite development server</li>
-                            <li>HTML5-QRCode library for scanning</li>
-                            <li>Real-time camera integration</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Frontend - Attendee App (React + Vite):</strong>
-                        <ul>
-                            <li>TypeScript with strict mode</li>
-                            <li>React functional components</li>
-                            <li>Vite bundling</li>
-                            <li>QR code generation library</li>
-                            <li>Event browsing and search interface</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Backend (NestJS + MySQL):</strong>
-                        <ul>
-                            <li>NestJS framework with TypeScript</li>
-                            <li>JWT Authentication & Authorization</li>
-                            <li>Role-based access control (Admin, Organizer, Attendee)</li>
-                            <li>RESTful API endpoints</li>
-                            <li>Swagger API Documentation</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Database (MySQL):</strong>
-                        <ul>
-                            <li>Event management tables</li>
-                            <li>User role management</li>
-                            <li>Registration and ticket records</li>
-                            <li>QR code ticket storage</li>
-                            <li>Attendance tracking</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>External Libraries & Tools:</strong>
-                        <ul>
-                            <li>html5-qrcode - QR code scanning</li>
-                            <li>qrcode.react - QR code generation</li>
-                            <li>axios/fetch - API communication</li>
-                            <li>JWT for authentication</li>
-                            <li>CSV export utilities</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Features:</strong>
-                        <ul>
-                            <li>Multi-role authentication system (Admin, Organizer, Attendee)</li>
-                            <li>Event creation and management</li>  
-                            <li>Attendee registration with capacity limits</li>
-                            <li>Unique QR code ticket generation</li>
-                            <li>Real-time QR code scanning for check-in</li>
-                            <li>Duplicate registration prevention</li>
-                            <li>CSV export for reports and analytics</li>
-                            <li>Dashboard with attendance statistics</li>
-                            <li>Manual ticket verification</li>
-                            <li>Responsive design for mobile and desktop</li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+
+        <!-- Fishpond Gallery -->
+        <div class="gallery-group">
+            <h3 class="gallery-group-title">Fishpond Monitoring System</h3>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="fishpond/about.jpg" alt="Fishpond About" loading="lazy" width="300" height="300">
+                    <figcaption>About Screen</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/feed.jpg" alt="Fishpond Feed" loading="lazy" width="300" height="300">
+                    <figcaption>Feed Management</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/fish_ui.jpg" alt="Fishpond UI" loading="lazy" width="300" height="300">
+                    <figcaption>Fish Dashboard</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/load_log.jpg" alt="Fishpond Load Log" loading="lazy" width="300" height="300">
+                    <figcaption>Data Logs</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/login.jpg" alt="Fishpond Login" loading="lazy" width="300" height="300">
+                    <figcaption>Login Screen</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/notif.jpg" alt="Fishpond Notifications" loading="lazy" width="300" height="300">
+                    <figcaption>Notifications</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/pH.jpg" alt="Fishpond pH Monitor" loading="lazy" width="300" height="300">
+                    <figcaption>pH Monitor</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/register.jpg" alt="Fishpond Register" loading="lazy" width="300" height="300">
+                    <figcaption>Registration</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/reset_pass.jpg" alt="Fishpond Reset Password" loading="lazy" width="300" height="300">
+                    <figcaption>Password Reset</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/temp.jpg" alt="Fishpond Temperature" loading="lazy" width="300" height="300">
+                    <figcaption>Temperature Monitor</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/turb.jpg" alt="Fishpond Turbidity" loading="lazy" width="300" height="300">
+                    <figcaption>Turbidity Sensor</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="fishpond/water_manage.jpg" alt="Fishpond Water Management" loading="lazy" width="300" height="300">
+                    <figcaption>Water Management</figcaption>
+                </figure>
             </div>
-            <div class="project-card" onclick="toggleProjectCard(this)">
-                <div class="project-header">
-                    <h4>Fishpond Monitoring System</h4>
-                    <i class="fas fa-chevron-down project-chevron"></i>
-                    <button class="project-close-btn" onclick="closeProjectCard(this.closest('.project-card'), event)" title="Close">&times;</button>
-                </div>
-                <p class="project-summary">Real-time sensor monitoring with email alerts, ESP32 integration, and secure storage across Firebase and MySQL.</p>
-                <div class="project-gallery">
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/login.jpg" alt="Fishpond App - Login Screen" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Login</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/register.jpg" alt="Fishpond App - Register Screen" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Register</div>
-                    </div>
-                     <div class="gallery-image-wrapper">
-                        <img src="fishpond/load_log.jpg" alt="Fishpond App - Load Log" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Loading Page</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/fish_ui.jpg" alt="Fishpond App - Fish Dashboard" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Dashboard</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/about.jpg" alt="Fishpond App - About" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">About</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/feed.jpg" alt="Fishpond App - Feed" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Feed</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/water_manage.jpg" alt="Fishpond App - Water Management" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Water Management</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/pH.jpg" alt="Fishpond App - pH Level" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">pH Level</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/temp.jpg" alt="Fishpond App - Temperature" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Temperature</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/turb.jpg" alt="Fishpond App - Turbidity" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Turbidity</div>
-                    </div>
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/notif.jpg" alt="Fishpond App - Notifications" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Alerts</div>
-                    </div>
-                   
-                    <div class="gallery-image-wrapper">
-                        <img src="fishpond/reset_pass.jpg" alt="Fishpond App - Reset Password" class="gallery-image" loading="lazy" width="300" height="300">
-                        <div class="gallery-label">Reset Password</div>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <div class="detail-section">
-                        <strong>Frontend (Mobile):</strong>
-                        <ul>
-                            <li>Flutter SDK (^3.11.0)</li>
-                            <li>Dart programming</li>
-                            <li>fl_chart for graphs</li>
-                            <li>flutter_secure_storage</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Backend:</strong>
-                        <ul>
-                            <li>Node.js + Express</li>
-                            <li>Nodemailer for emails</li>
-                            <li>CORS + body-parser</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Database:</strong>
-                        <ul>
-                            <li>Firebase Realtime DB (sensor data)</li>
-                            <li>Cloud Firestore (user data)</li>
-                            <li>MySQL (user management)</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Hardware:</strong>
-                        <ul>
-                            <li>ESP32 microcontroller</li>
-                            <li>WiFi connectivity</li>
-                            <li>NTP time synchronization</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <strong>Features:</strong>
-                        <ul>
-                            <li>Real-time sensor monitoring</li>
-                            <li>Email alerts for water quality</li>
-                            <li>Feeding event logging</li>
-                            <li>Authentication & secure storage</li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+
+        <!-- Ticket Gallery -->
+        <div class="gallery-group">
+            <h3 class="gallery-group-title">Event Ticket System</h3>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="ticket/admin_events.jpg" alt="Admin Events" loading="lazy" width="300" height="300">
+                    <figcaption>Admin Events</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/admin_ui.jpg" alt="Admin Interface" loading="lazy" width="300" height="300">
+                    <figcaption>Admin Dashboard</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/attendee_land.jpg" alt="Attendee Landing" loading="lazy" width="300" height="300">
+                    <figcaption>Attendee Landing</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/attendee_ticket.jpg" alt="Attendee Ticket" loading="lazy" width="300" height="300">
+                    <figcaption>My Tickets</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/oragnizer_qr.jpg" alt="Organizer QR Scanner" loading="lazy" width="300" height="300">
+                    <figcaption>QR Scanner</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/organizer_create.jpg" alt="Organizer Create Event" loading="lazy" width="300" height="300">
+                    <figcaption>Create Event</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/organizer_edit.jpg" alt="Organizer Edit Event" loading="lazy" width="300" height="300">
+                    <figcaption>Edit Event</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/organizer_events.jpg" alt="Organizer Events" loading="lazy" width="300" height="300">
+                    <figcaption>My Events</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/organizer_ui.jpg" alt="Organizer Interface" loading="lazy" width="300" height="300">
+                    <figcaption>Organizer Dashboard</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/register.jpg" alt="Register" loading="lazy" width="300" height="300">
+                    <figcaption>Registration</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/register_logged.jpg" alt="Register Logged In" loading="lazy" width="300" height="300">
+                    <figcaption>Registered Users</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="ticket/unlogged.jpg" alt="Unlogged View" loading="lazy" width="300" height="300">
+                    <figcaption>Guest View</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <section id="skills" class="skills-section-full">
         <h2 class="section-title">Technologies & Tools</h2>
-        <div class="skills-categories">
-            <!-- Frontend Development -->
-            <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-code"></i>
-                        <h3>Frontend Development</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy" width="40" height="40">
-                            <span>HTML5</span>
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy" width="40" height="40">
-                            <span>CSS3</span>
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="40" height="40">
-                            <span>JavaScript</span>
-                        </a>
-                        <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" width="40" height="40">
-                            <span>React</span>
-                        </a>
-                    </div>
+        <div class="tech-stack">
+            <div class="tech-group">
+                <h3 class="tech-category-label">Frontend</h3>
+                <div class="tech-chips">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
+                        <span>HTML5</span>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
+                        <span>CSS3</span>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                        <span>JavaScript</span>
+                    </a>
+                    <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy">
+                        <span>React</span>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Backend Development -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-server"></i>
-                        <h3>Backend Development</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" width="40" height="40">
-                            <span>Node.js</span>
-                        </a>
-                        <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" width="40" height="40">
-                            <span>Python</span>
-                        </a>
-                        <a href="https://cplusplus.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy" width="40" height="40">
-                            <span>C++</span>
-                        </a>
-                    </div>
+            <div class="tech-group">
+                <h3 class="tech-category-label">Backend</h3>
+                <div class="tech-chips">
+                    <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy">
+                        <span>Node.js</span>
+                    </a>
+                    <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                        <span>Python</span>
+                    </a>
+                    <a href="https://cplusplus.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy">
+                        <span>C++</span>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Mobile Development -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-mobile-alt"></i>
-                        <h3>Mobile Development</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy" width="40" height="40">
-                            <span>Flutter</span>
-                        </a>
-                        <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android Studio" loading="lazy" width="40" height="40">
-                            <span>Android Studio</span>
-                        </a>
-                    </div>
+            <div class="tech-group">
+                <h3 class="tech-category-label">Mobile</h3>
+                <div class="tech-chips">
+                    <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy">
+                        <span>Flutter</span>
+                    </a>
+                    <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" loading="lazy">
+                        <span>Android</span>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Database -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-database"></i>
-                        <h3>Database</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy" width="40" height="40">
-                            <span>MySQL</span>
-                        </a>
-                        <a href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase">
-                            <span>Firebase</span>
-                        </a>
-                    </div>
+            <div class="tech-group">
+                <h3 class="tech-category-label">Database</h3>
+                <div class="tech-chips">
+                    <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy">
+                        <span>MySQL</span>
+                    </a>
+                    <a href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy">
+                        <span>Firebase</span>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Hardware -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-microchip"></i>
-                        <h3>Hardware</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" loading="lazy" width="40" height="40">
-                            <span>Arduino</span>
-                        </a>
-                    </div>
+            <div class="tech-group">
+                <h3 class="tech-category-label">Hardware</h3>
+                <div class="tech-chips">
+                    <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" loading="lazy">
+                        <span>Arduino</span>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Tools & Platforms -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fa-solid fa-wrench"></i>  
-                        <h3>Tools & Platforms</h3>
-                    </div>
-                    <div class="tech-grid-category">
-                        <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy" width="40" height="40">
-                            <span>Git</span>
-                        </a>
-                        <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer" class="tech-item-fb" style="text-decoration: none; color: inherit;">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy" width="40" height="40">
-                            <span>VS Code</span>
-                        </a>
-                    </div>
+            <div class="tech-group">
+                <h3 class="tech-category-label">Tools</h3>
+                <div class="tech-chips">
+                    <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">
+                        <span>Git</span>
+                    </a>
+                    <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
+                        <span>VS Code</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -719,13 +589,13 @@
                 <a href="mailto:kurtshgn637@gmail.com" class="footer-icon" title="Email">
                      <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://www.instagram.com/dang_koy/" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Instagram">
+                <a href="https://www.instagram.com/Ennad_Truk/" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.facebook.com/aleck.sahagun" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-icon" title="GitHub">
+                <a href="https://github.com/dkcs-portfolio" target="_blank" rel="noopener noreferrer" class="footer-icon" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -733,12 +603,35 @@
     </footer>
 
     <script>
+        // Project Accordion Functionality
+        document.querySelectorAll('.project-accordion-item').forEach(item => {
+            const header = item.querySelector('.project-accordion-header');
+            const body = item.querySelector('.project-accordion-body');
+            const toggle = item.querySelector('.project-accordion-toggle i');
+            
+            header.addEventListener('click', () => {
+                item.classList.toggle('expanded');
+                
+                if (item.classList.contains('expanded')) {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    body.style.opacity = '1';
+                    toggle.style.transform = 'rotate(180deg)';
+                } else {
+                    body.style.maxHeight = '0';
+                    body.style.opacity = '0';
+                    toggle.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Initialize collapsed state
+            body.style.maxHeight = '0';
+            body.style.opacity = '0';
+        });
+
         // Safety reset: avoid stale modal state on refresh/navigation
         document.body.classList.remove('project-modal-open');
         document.body.style.overflow = '';
-        document.querySelectorAll('.project-card.expanded').forEach(card => card.classList.remove('expanded'));
-        const initialBackdrop = document.querySelector('.project-backdrop');
-        if (initialBackdrop) initialBackdrop.style.display = 'none';
+        document.querySelectorAll('.project-accordion-item.expanded').forEach(item => item.classList.remove('expanded'));
 
         // Scroll animation observer
         const observerOptions = {
@@ -783,8 +676,8 @@
                         element.style.animation = 'slideInUp 0.8s ease-out forwards';
                         element.style.opacity = '1';
                     } else if (element.classList.contains('about-card') || 
-                               element.classList.contains('project-card') || 
-                               element.classList.contains('skill-category')) {
+                               element.classList.contains('project-accordion-item') || 
+                               element.classList.contains('tech-group')) {
                         element.style.animation = 'none';
                         void element.offsetWidth;
                         element.style.animation = 'slideInUp 0.6s ease-out forwards';
@@ -798,11 +691,20 @@
                         element.style.animation = 'none';
                         void element.offsetWidth;
                         element.style.animation = 'socialRowIn 0.45s ease-out forwards';
+                    } else if (element.classList.contains('gallery-item') || element.classList.contains('gallery-group-title')) {
+                        // Add fade-in class to trigger CSS animation (don't override opacity)
+                        element.classList.add('fade-in');
                     }
                 } else {
                     // Element left viewport - reset so animation can replay
                     if (element.classList.contains('info-card') || element.classList.contains('info-cards-stack') || element.classList.contains('mobile-social-row')) {
                         // Keep social icons visible to avoid mobile intersection flicker/hide
+                        return;
+                    }
+                    // Reset gallery items to replay animation on re-entry
+                    if (element.classList.contains('gallery-item') || element.classList.contains('gallery-group-title')) {
+                        element.classList.remove('fade-in');
+                        element.style.opacity = '0';
                         return;
                     }
                     element.style.opacity = '0';
@@ -838,14 +740,25 @@
             observer.observe(card);
         });
 
-        document.querySelectorAll('.project-card').forEach((card, index) => {
-            card.style.animationDelay = (index * 0.1) + 's';
-            observer.observe(card);
+        document.querySelectorAll('.project-accordion-item').forEach((item, index) => {
+            item.style.animationDelay = (index * 0.1) + 's';
+            observer.observe(item);
         });
 
-        document.querySelectorAll('.skill-category').forEach((card, index) => {
-            card.style.animationDelay = (index * 0.1) + 's';
-            observer.observe(card);
+        document.querySelectorAll('.tech-group').forEach((group, index) => {
+            group.style.animationDelay = (index * 0.1) + 's';
+            observer.observe(group);
+        });
+
+        // Observe gallery items with staggered delays
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.style.animationDelay = (index * 0.1) + 's';
+            observer.observe(item);
+        });
+
+        // Observe gallery group titles
+        document.querySelectorAll('.gallery-group-title').forEach(title => {
+            observer.observe(title);
         });
 
         // Observe section titles
@@ -880,122 +793,10 @@
                 lastScrollY = currentY;
             }
         }, { passive: true });
-
-        // Toggle project card expand/collapse with modal effect
-        function toggleProjectCard(cardElement) {
-            // Close any currently open card
-            const openCard = document.querySelector('.project-card.expanded');
-            if (openCard && openCard !== cardElement) {
-                closeProjectCard(openCard);
-                // Wait for close animation to complete before opening new card
-                setTimeout(() => {
-                    openNewCard(cardElement);
-                }, 600);
-            } else if (!cardElement.classList.contains('expanded')) {
-                openNewCard(cardElement);
-            } else {
-                closeProjectCard(cardElement);
-            }
-        }
-
-        function openNewCard(cardElement) {
-            cardElement.classList.add('expanded');
-            document.body.classList.add('project-modal-open');
-            document.body.style.overflow = 'hidden';
-
-            const backdrop = document.querySelector('.project-backdrop');
-            if (backdrop) backdrop.style.display = 'block';
-            
-            // Scroll to card after animations complete
-            setTimeout(() => {
-                cardElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 600);
-        }
-
-        function closeProjectCard(cardElement, e) {
-            if (e) e.stopPropagation();
-            if (!cardElement) return;
-            cardElement.classList.remove('expanded');
-            document.body.classList.remove('project-modal-open');
-            document.body.style.overflow = '';
-            const backdrop = document.querySelector('.project-backdrop');
-            if (backdrop) backdrop.style.display = 'none';
-        }
-
-        // Close card on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const openCard = document.querySelector('.project-card.expanded');
-                if (openCard) closeProjectCard(openCard);
-            }
-        });
-    </script>
-
-    <!-- Image Modal/Lightbox -->
-    <div id="imageModal" class="image-modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeImageModal()">&times;</button>
-            <button class="modal-prev" onclick="prevImage()">&#10094;</button>
-            <img id="modalImage" src="" alt="Full view" class="modal-image">
-            <button class="modal-next" onclick="nextImage()">&#10095;</button>
-        </div>
-    </div>
-
-    <script>
-        let currentImageIndex = 0;
-        let currentGalleryImages = [];
-
-        function openImageModal(img, gallery) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            currentGalleryImages = Array.from(gallery.querySelectorAll('.gallery-image'));
-            currentImageIndex = currentGalleryImages.indexOf(img);
-            modalImage.src = img.src;
-            modal.classList.add('active');
-            modal.style.display = 'flex';
-        }
-
-        function closeImageModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('active');
-            modal.style.display = 'none';
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
-            document.getElementById('modalImage').src = currentGalleryImages[currentImageIndex].src;
-        }
-
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-            document.getElementById('modalImage').src = currentGalleryImages[currentImageIndex].src;
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            const modal = document.getElementById('imageModal');
-            if (modal.style.display === 'flex') {
-                if (event.key === 'ArrowRight') nextImage();
-                if (event.key === 'ArrowLeft') prevImage();
-                if (event.key === 'Escape') closeImageModal();
-            }
-        });
-
-        // Add click listeners to gallery images
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.gallery-image').forEach(img => {
-                img.style.cursor = 'pointer';
-                img.addEventListener('click', function() {
-                    const gallery = this.closest('.project-gallery');
-                    openImageModal(this, gallery);
-                });
-            });
-        });
     </script>
 
     <!-- Service Worker Registration for PWA & Offline Support -->
     <script>
-        // Production: Enable service worker for offline support and caching
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js', { scope: '/' })
@@ -1005,7 +806,7 @@
                         // Check for updates periodically
                         setInterval(() => {
                             registration.update();
-                        }, 60000); // Check every minute
+                        }, 60000);
                     })
                     .catch(error => {
                         console.warn('Service Worker registration failed:', error);
@@ -1015,49 +816,34 @@
                 navigator.serviceWorker.addEventListener('controllerchange', () => {
                     console.log('Service Worker has been updated');
                 });
-            });
-            
-            // Handle SW messages
-            navigator.serviceWorker.addEventListener('message', event => {
-                if (event.data.type === 'CACHE_UPDATED') {
-                    console.log('Cache has been updated');
-                }
-            });
-        }
-        
-        // Optimization: Preload images on intersection
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                        }
-                        observer.unobserve(img);
+                
+                // Handle SW messages
+                navigator.serviceWorker.addEventListener('message', event => {
+                    if (event.data.type === 'CACHE_UPDATED') {
+                        console.log('Cache has been updated');
                     }
                 });
-            }, { rootMargin: '50px' });
+            });
             
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-    </script>
-
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('Service Worker registered successfully:', registration);
-                    })
-                    .catch(error => {
-                        console.warn('Service Worker registration failed:', error);
+            // Optimization: Preload images on intersection
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            observer.unobserve(img);
+                        }
                     });
-            });
+                }, { rootMargin: '50px' });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
         }
     </script>
 

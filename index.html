@@ -124,7 +124,7 @@
         <div class="socials">
             <!-- Mobile icon row -->
             <div class="mobile-social-row" aria-label="Social links">
-                <a href="mailto:kurtshgn637@gmail.com" class="mobile-social-link" title="Email">
+                <a href="mailto:ennadtruk@gmail.com" class="mobile-social-link" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.instagram.com/Ennad_Truk/" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="Instagram">
@@ -144,13 +144,13 @@
             <!-- Desktop info cards stack -->
             <div class="info-cards-stack">
             <!-- Email Card -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kurtshgn637@gmail.com" target="_blank" rel="noopener noreferrer" class="info-card email-card">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ennadtruk@gmail.com" target="_blank" rel="noopener noreferrer" class="info-card email-card">
                 <div class="card-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="card-content">
                     <h3>Email</h3>
-                    <p>kurtshgn637@gmail.com</p>
+                    <p>ennadtruk@gmail.com</p>
                 </div>
                 <i class="fas fa-arrow-up-right"></i>
             </a>
@@ -586,7 +586,7 @@
                 <p>&copy; 2026 Danne Kurt Sahagun. All rights reserved.</p>
             </div>
             <div class="footer-socials">
-                <a href="mailto:kurtshgn637@gmail.com" class="footer-icon" title="Email">
+                <a href="mailto:ennadtruk@gmail.com" class="footer-icon" title="Email">
                      <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.instagram.com/Ennad_Truk/" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Instagram">
@@ -595,7 +595,7 @@
                 <a href="https://www.facebook.com/aleck.sahagun" target="_blank" rel="noopener noreferrer" class="footer-icon" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://github.com/dkcs-portfolio" target="_blank" rel="noopener noreferrer" class="footer-icon" title="GitHub">
+                <a href="https://github.com/Dangkoy" target="_blank" rel="noopener noreferrer" class="footer-icon" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -845,6 +845,70 @@
                 });
             }
         }
+    </script>
+
+    <!-- Image Modal/Lightbox -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+            <button class="modal-prev" onclick="prevImage()">&#10094;</button>
+            <img id="modalImage" src="" alt="Full view" class="modal-image">
+            <button class="modal-next" onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentImageIndex = 0;
+        let currentGalleryImages = [];
+
+        function openImageModal(img, gallery) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            currentGalleryImages = Array.from(gallery.querySelectorAll('.gallery-item img'));
+            currentImageIndex = currentGalleryImages.indexOf(img);
+            modalImage.src = img.src;
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+            document.getElementById('modalImage').src = currentGalleryImages[currentImageIndex].src;
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            document.getElementById('modalImage').src = currentGalleryImages[currentImageIndex].src;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('imageModal');
+            if (modal.style.display === 'flex') {
+                if (event.key === 'ArrowRight') nextImage();
+                if (event.key === 'ArrowLeft') prevImage();
+                if (event.key === 'Escape') closeImageModal();
+            }
+        });
+
+        // Add click listeners to gallery images
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    const gallery = this.closest('.gallery-grid');
+                    openImageModal(this, gallery);
+                });
+            });
+        });
     </script>
 
 </body>

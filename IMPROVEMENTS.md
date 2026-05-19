@@ -343,7 +343,7 @@ All production-level documentation is included:
 
 ## 📞 Support & Maintenance
 
-**Contact**: kurtshgn637@gmail.com  
+**Contact**: ennadtruk@gmail.com  
 **Repository**: [Link to repo]  
 **Issues**: Report via email or issue tracker
 

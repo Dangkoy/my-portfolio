@@ -244,7 +244,7 @@ Summary of all 50+ improvements including:
 
 ## 📞 Support
 
-- **Email**: kurtshgn637@gmail.com
+- **Email**: ennadtruk@gmail.com
 - **Issues**: Document in tracking system
 - **Documentation**: See DEPLOYMENT.md & PERFORMANCE.md
 

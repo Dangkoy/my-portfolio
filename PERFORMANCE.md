@@ -391,4 +391,4 @@ npm install web-vitals
 **Last Updated**: May 10, 2026  
 **Status**: Production Ready ✅
 
-For questions, contact: kurtshgn637@gmail.com
+For questions, contact: ennadtruk@gmail.com

@@ -290,7 +290,7 @@ fetch('/api/contact', {
 
 ## Support & Maintenance
 
-For issues or feature requests, contact: kurtshgn637@gmail.com
+For issues or feature requests, contact: ennadtruk@gmail.com
 
 ---
 

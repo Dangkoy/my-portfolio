@@ -85,14 +85,20 @@
                 <a href="#home" class="nav-signature">DKCS PORTFOLIO</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#skills">Tools</a></li>
+                <li><a href="#home" class="nav-link-item">Home</a></li>
+                <li><a href="#about" class="nav-link-item">About</a></li>
+                <li><a href="#projects" class="nav-link-item">Projects</a></li>
+                <li><a href="#gallery" class="nav-link-item">Gallery</a></li>
+                <li><a href="#skills" class="nav-link-item">Tools</a></li>
+                <li><button id="themeToggle" class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar"></div>
 
     <div class="container" id="home">
         <!-- Left Side: Profile Card -->
@@ -847,6 +853,52 @@
         }
     </script>
 
+    <!-- Theme Toggle Script -->
+    <script>
+        // Initialize theme on page load
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon(theme);
+        }
+
+        // Update theme icon based on current theme
+        function updateThemeIcon(theme) {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('i');
+                if (theme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+        }
+
+        // Toggle theme on button click
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateThemeIcon(newTheme);
+                });
+            }
+        });
+
+        // Initialize theme immediately (before page renders)
+        initTheme();
+    </script>
+
     <!-- Image Modal/Lightbox -->
     <div id="imageModal" class="image-modal">
         <div class="modal-content">
@@ -909,7 +961,70 @@
                 });
             });
         });
+
+        // ============ BACK-TO-TOP BUTTON ============
+        // Wait for DOM to ensure button exists before referencing it
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            if (!backToTopBtn) return; // Button doesn't exist yet, skip
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            }, { passive: true });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // ============ SCROLL PROGRESS INDICATOR ============
+        const progressBar = document.querySelector('.scroll-progress-bar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.scrollY / windowHeight) * 100;
+                progressBar.style.width = scrolled + '%';
+            }, { passive: true });
+        }
+
+        // ============ ACTIVE SECTION INDICATOR ============
+        const sections = document.querySelectorAll('section[id], .container[id]'); // Only query sections and containers
+        const navLinks = document.querySelectorAll('.nav-link-item');
+
+        if (sections.length > 0 && navLinks.length > 0) {
+            function updateActiveSection() {
+                let current = 'home';
+                
+                sections.forEach(section => {
+                    if (section.id && window.scrollY >= section.offsetTop - 150) {
+                        current = section.id;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').slice(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveSection, { passive: true });
+            updateActiveSection(); // Call on page load
+        }
     </script>
+
+    <!-- Back-to-Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 </body>
 </html>

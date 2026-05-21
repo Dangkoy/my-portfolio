@@ -848,21 +848,22 @@ body {
 }
 
 /* GitHub Card */
+
 .github-card {
-    background: #ffffff;
-    color: #333333;
-    border-color: #e0e0e0;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
     justify-content: space-between;
 }
 
 .github-card .card-icon {
-    background: #f5f5f5;
-    color: #2a2a2a;
+    background: var(--icon-bg);
+    color: var(--icon-color);
 }
 
 .follow-btn {
-    background: #2a2a2a;
-    color: #ffffff;
+    background: var(--hover-bg);
+    color: var(--text-primary);
     border: none;
     padding: 0.6rem 1.5rem;
     border-radius: 20px;
@@ -874,29 +875,29 @@ body {
 }
 
 .follow-btn:hover {
-    background: #1a1a1a;
+    background: var(--hover-bg-strong);
     transform: scale(1.05);
 }
 
 .github-card:hover {
-    background: #2a2a2a;
-    color: #ffffff;
-    border-color: #2a2a2a;
-    box-shadow: 0 8px 24px rgba(42, 42, 42, 0.25);
+    background: var(--hover-bg);
+    color: var(--text-primary);
+    border-color: var(--hover-bg);
+    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .github-card:hover .card-icon {
-    background: #1a1a1a;
-    color: #ffffff;
+    background: var(--hover-bg-strong);
+    color: var(--text-primary);
 }
 
 .github-card:hover .card-content h3,
 .github-card:hover .card-content p {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .github-card:hover > i:last-of-type {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /* ============ ABOUT SECTION ============ */

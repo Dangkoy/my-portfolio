@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Full Stack Developer & UI/UX Enthusiast. Portfolio showcasing Arduino IoT projects, web applications, and innovative tech solutions.">
-    <meta name="theme-color" content="#2a2a2a">
-    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#121417">
+    <meta name="color-scheme" content="dark">
     
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="Full Stack Developer, UI/UX Design, Arduino, IoT, Web Development, Flutter, React">
@@ -43,6 +43,9 @@
     
     <title>Danne Kurt Sahagun - Full Stack Developer</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles.css">
     
@@ -82,14 +85,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <a href="#home" class="nav-signature">DKCS PORTFOLIO</a>
+                <a href="#home" class="nav-signature"><span class="nav-name-light">DK_</span> <span class="nav-name-bold">Sahagun</span></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link-item">Home</a></li>
-                <li><a href="#about" class="nav-link-item">About</a></li>
                 <li><a href="#projects" class="nav-link-item">Projects</a></li>
                 <li><a href="#gallery" class="nav-link-item">Gallery</a></li>
-                <li><a href="#skills" class="nav-link-item">Tools</a></li>
+                <li><a href="#about" class="nav-link-item">About me</a></li>
+                <li><a href="Official CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link-item">Resume</a></li>
+                <li><a href="#skills" class="nav-link-item">Technologies</a></li>
             </ul>
         </div>
     </nav>
@@ -97,34 +100,28 @@
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress-bar"></div>
 
-    <div class="container" id="home">
-        <!-- Left Side: Profile Card -->
-        <div class="profile-card">
-            <div class="profile-image-wrapper">
-                <img src="grad_pic.jpg" alt="Danne Kurt Sahagun - Full Stack Developer" class="profile-image" loading="lazy" width="200" height="200">
-            </div>
-            
-            <h1 class="profile-full-name">Danne Kurt C. Sahagun</h1>
-            <p class="profile-degree">BS in Information Technology</p>
-            
-            <div class="profile-info-item">
-                <i class="fas fa-calendar"></i>
-                <span>October 28, 2003</span>
-            </div>
-            
-            <div class="profile-info-item">
-                <i class="fas fa-briefcase"></i>
-                <span>Full Stack Developer | UI/UX Enthusiast</span>
-            </div>
-        
-            <div class="profile-info-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>BSIT Graduate at Cavite State University - Imus Campus</span>
+    <section class="hero-section" id="home">
+        <div class="hero-intro">
+            <p class="hero-role">Full Stack Developer &amp; UI/UX Enthusiast</p>
+            <h1 class="hero-greeting">Hi, I'm <em>Danne Kurt.</em></h1>
+            <p class="hero-bio">Dedicated to building apps and digital products that are intuitive, responsive, and user-centered — from IoT systems to full-stack web platforms.</p>
+            <a href="#projects" class="hero-cta">Check out my work</a>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-collage">
+                <article class="profile-card">
+                    <div class="profile-image-wrapper">
+                        <img src="grad_pic.jpg" alt="Danne Kurt Sahagun - Full Stack Developer" class="profile-image" loading="eager" width="140" height="140">
+                    </div>
+                    <h2 class="profile-full-name">Danne Kurt C. Sahagun</h2>
+                    <p class="profile-degree">BS in Information Technology</p>
+                </article>
             </div>
         </div>
 
-        <!-- Socials (desktop cards + dedicated mobile icon row) -->
-        <div class="socials">
+        <!-- Socials -->
+        <div class="socials" id="contact">
             <!-- Mobile icon row -->
             <div class="mobile-social-row" aria-label="Social links">
                 <a href="mailto:ennadtruk@gmail.com" class="mobile-social-link" title="Email">
@@ -203,11 +200,11 @@
                     <h3>GitHub</h3>
                     <p>View my projects</p>
                 </div>
-                <button class="follow-btn">Follow</button>
+                <i class="fas fa-arrow-up-right"></i>
             </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Additional Sections Below -->
     <!-- About Section -->
@@ -488,8 +485,9 @@
     <section id="skills" class="skills-section-full">
         <h2 class="section-title">Technologies & Tools</h2>
         <div class="tech-stack">
+            <!-- Frontend -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Frontend</h3>
+                <div class="tech-category-label">FRONTEND</div>
                 <div class="tech-chips">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
@@ -510,8 +508,9 @@
                 </div>
             </div>
 
+            <!-- Backend -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Backend</h3>
+                <div class="tech-category-label">BACKEND</div>
                 <div class="tech-chips">
                     <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy">
@@ -528,8 +527,9 @@
                 </div>
             </div>
 
+            <!-- Mobile -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Mobile</h3>
+                <div class="tech-category-label">MOBILE</div>
                 <div class="tech-chips">
                     <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy">
@@ -542,8 +542,9 @@
                 </div>
             </div>
 
+            <!-- Database -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Database</h3>
+                <div class="tech-category-label">DATABASE</div>
                 <div class="tech-chips">
                     <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy">
@@ -556,8 +557,9 @@
                 </div>
             </div>
 
+            <!-- Hardware -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Hardware</h3>
+                <div class="tech-category-label">HARDWARE</div>
                 <div class="tech-chips">
                     <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" loading="lazy">
@@ -566,8 +568,9 @@
                 </div>
             </div>
 
+            <!-- Tools -->
             <div class="tech-group">
-                <h3 class="tech-category-label">Tools</h3>
+                <div class="tech-category-label">TOOLS</div>
                 <div class="tech-chips">
                     <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-chip">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">
@@ -651,7 +654,17 @@
                     if (element.classList.contains('profile-card')) {
                         element.style.animation = 'none';
                         void element.offsetWidth;
+                        element.style.animation = 'slideInRight 0.8s ease-out forwards';
+                        element.style.opacity = '1';
+                    } else if (element.classList.contains('hero-intro')) {
+                        element.style.animation = 'none';
+                        void element.offsetWidth;
                         element.style.animation = 'slideInLeft 0.8s ease-out forwards';
+                        element.style.opacity = '1';
+                    } else if (element.classList.contains('hero-visual')) {
+                        element.style.animation = 'none';
+                        void element.offsetWidth;
+                        element.style.animation = 'slideInRight 0.8s ease-out forwards';
                         element.style.opacity = '1';
                     } else if (element.classList.contains('info-cards-stack')) {
                         element.style.animation = 'none';
@@ -716,7 +729,13 @@
             });
         }, observerOptions);
 
-        // Observe profile and info cards
+        // Observe hero and profile elements
+        const heroIntro = document.querySelector('.hero-intro');
+        if (heroIntro) observer.observe(heroIntro);
+
+        const heroVisual = document.querySelector('.hero-visual');
+        if (heroVisual) observer.observe(heroVisual);
+
         const profileCard = document.querySelector('.profile-card');
         if (profileCard) observer.observe(profileCard);
         
@@ -850,52 +869,6 @@
         }
     </script>
 
-    <!-- Theme Toggle Script -->
-    <script>
-        // Initialize theme on page load
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-            
-            document.documentElement.setAttribute('data-theme', theme);
-            updateThemeIcon(theme);
-        }
-
-        // Update theme icon based on current theme
-        function updateThemeIcon(theme) {
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                const icon = themeToggle.querySelector('i');
-                if (theme === 'dark') {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
-            }
-        }
-
-        // Toggle theme on button click
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    
-                    document.documentElement.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    updateThemeIcon(newTheme);
-                });
-            }
-        });
-
-        // Initialize theme immediately (before page renders)
-        initTheme();
-    </script>
-
     <!-- Image Modal/Lightbox -->
     <div id="imageModal" class="image-modal">
         <div class="modal-content">
@@ -992,7 +965,7 @@
         }
 
         // ============ ACTIVE SECTION INDICATOR ============
-        const sections = document.querySelectorAll('section[id], .container[id]'); // Only query sections and containers
+        const sections = document.querySelectorAll('section[id], .container[id], .socials[id]');
         const navLinks = document.querySelectorAll('.nav-link-item');
 
         if (sections.length > 0 && navLinks.length > 0) {
@@ -1020,9 +993,6 @@
 
     <!-- Fixed Action Buttons -->
     <div class="fixed-action-buttons">
-        <button id="themeToggle" class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i>
-        </button>
         <button id="backToTopBtn" class="back-to-top-btn" title="Back to top">
             <i class="fas fa-arrow-up"></i>
         </button>

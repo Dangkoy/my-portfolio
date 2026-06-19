@@ -10,7 +10,7 @@ const CACHE_NAME = `dkcs-portfolio-${CACHE_VERSION}`;
 const CORE_ASSETS = [
     './',
     './index.html',
-    './new-styles.css',
+    './styles.css',
     './manifest.json'
 ];
 

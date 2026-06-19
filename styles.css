@@ -1044,7 +1044,3 @@ a {
     .fixed-action-buttons { bottom: 1rem; right: 1rem; }
     .back-to-top-btn { width: 42px; height: 42px; }
 }
-
-@media (max-width: 360px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-}
